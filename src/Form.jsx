@@ -1,11 +1,12 @@
 import { useState } from 'react';
 
-const Form = () => {
-  const [newItem, setNewItem] = useState('');
+const Form = ({ addItem }) => {
+  const [newItemValue, setNewItemValue] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(newItem);
+    addItem(newItemValue);
+    setNewItemValue('');
   };
 
   return (
@@ -15,8 +16,8 @@ const Form = () => {
         <input
           type="text"
           className="form-input"
-          value={newItem}
-          onChange={(event) => setNewItem(event.target.value)}
+          value={newItemValue}
+          onChange={(event) => setNewItemValue(event.target.value)}
         />
         <button type="submit" className="btn">
           add item
