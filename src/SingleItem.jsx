@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const SingleItem = ({ item }) => {
+const SingleItem = ({ item, removeItem }) => {
   const [isChecked, setIsChecked] = useState(item.completed);
 
   return (
@@ -18,7 +18,15 @@ const SingleItem = ({ item }) => {
       >
         {item.name}
       </p>
-      <button className="btn remove-btn">delete</button>
+      <button
+        className="btn remove-btn"
+        type="button"
+        onClick={() => {
+          removeItem(item.id);
+        }}
+      >
+        delete
+      </button>
     </div>
   );
 };
