@@ -255,16 +255,17 @@ ul {
 /* ============= PROJECT CSS =============== */
 
 .section-center {
+  background: var(--white);
   width: 90vw;
+  max-width: 30rem;
   margin: 0 auto;
   margin-top: 8rem;
-  max-width: 30rem;
-  background: var(--white);
-  border-radius: var(--borderRadius);
   padding: 2rem;
+  border-radius: var(--borderRadius);
   box-shadow: var(--shadow-1);
   transition: var(--transition);
 }
+
 .section-center:hover {
   box-shadow: var(--shadow-3);
 }
@@ -273,19 +274,20 @@ form h4 {
   text-align: center;
   margin-bottom: 1.5rem;
 }
+
 .form-control {
   display: grid;
   grid-template-columns: 1fr 100px;
 }
+
 .form-input {
-  border-radius: 0;
-  border-top-left-radius: var(--borderRadius);
-  border-bottom-left-radius: var(--borderRadius);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
+
 .form-control .btn {
-  border-radius: 0;
-  border-top-right-radius: var(--borderRadius);
-  border-bottom-right-radius: var(--borderRadius);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .items {
@@ -293,20 +295,22 @@ form h4 {
   display: grid;
   row-gap: 1rem;
 }
+
 .single-item {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  column-gap: 1rem;
   align-items: center;
+  column-gap: 1rem;
 }
+
 .single-item p {
   letter-spacing: var(--letterSpacing);
 }
 
 .remove-btn {
   padding: 0.15rem 0.25rem;
+  background-color: var(--black);
   font-size: 0.75rem;
-  background: var(--black);
 }
 
 .Toastify__toast {
